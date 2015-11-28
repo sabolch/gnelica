@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="utf-8" />
-
+	<!-- Комментарий -->
 	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 	
 	<meta content="" name="description" />
