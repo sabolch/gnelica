@@ -11,7 +11,7 @@
  *
  * @package gnelitsa
  */
-// fgfg
+
 //новое изменение
 get_header(); ?>
 
