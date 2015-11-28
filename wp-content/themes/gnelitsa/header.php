@@ -1,12 +1,11 @@
-
-<?php wp_head(); ?>
 <!DOCTYPE html>
 <html>
 <head>
 
 	<meta charset="utf-8" />
 
-	<title>Гнелица Н.Н.</title>
+	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+	
 	<meta content="" name="description" />
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png" />
 
@@ -29,7 +28,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/libs/jquery/jquery-1.11.1.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/libs/owl-carousel/owl.carousel.js"></script>
-
+	<?php wp_head(); ?>
 </head>
 <body>
    <section class="header">
