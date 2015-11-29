@@ -164,6 +164,8 @@ nav .pagination li .active {
 .info_blog .info_blog_block img {
   width: 30%;
   float: left;
+  width: 200px;
+  height: 133px;
 }
 /* line 36, ./sass/_info_blog.scss */
 .info_blog .info_blog_block div {
