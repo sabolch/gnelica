@@ -30,6 +30,13 @@ Template name: Запись на прием
                         ОШИБКА! Пожалуйста, заполните все поля перед отправкой заявки!</p>
                     </div>
                 </div>
+                <div class="col-md-12 form_sended">
+                    <div class="col-md-12">
+                        <p><img src="img/error_icon.png" alt="">
+                        Спасибо. Ваша заявка принята. Наш меджер свяжется с вами в ближайшее время </p>
+                    </div>
+                </div>
+
                 <div class="col-md-12">
                     <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
                 </div>

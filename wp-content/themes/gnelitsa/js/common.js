@@ -76,22 +76,38 @@ $(document).ready(function() {
     });
  
   $('#send-form-button').click( function(event){
-    alert('sss');
+    //alert('sss');
     
     var empty = true;
+    $('.priom  input[name="uname"]').each(function(o){
+        var str = $(this).val().trim();
+        if ((str == "") || (str == "Телефон для уточнения размера бытовки")){
+          empty = false;
+        }
+    });
+
     $('.priom  input[name="phone"]').each(function(o){
-      var str = $(this).val().trim();
+        var str = $(this).val().trim();
+        if ((str == "") || (str == "Телефон для уточнения размера бытовки")){
+          empty = false;
+        }
+    });
+
+    $('.priom  input[name="email"]').each(function(o){
+        var str = $(this).val().trim();
         if ((str == "") || (str == "Телефон для уточнения размера бытовки")){
           empty = false;
         }
     });
 
     if (empty == false){
-      $(this).parent().find('.error').css('display','block');
+      $('.form_error').css('display','block');
       return false;
 
     }else{
-      
+       $('.form_error').css('display','none');
+       $('.form_sended').css('display','block');
+       
       $.ajax({
         type: 'POST',
         url: '/sendmessage.php',
