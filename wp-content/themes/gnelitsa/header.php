@@ -1,5 +1,3 @@
-
-<?php wp_head(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +27,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/libs/jquery/jquery-1.11.1.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/libs/owl-carousel/owl.carousel.js"></script>
-
+	<?php wp_head(); ?>
 </head>
 <body>
    <section class="header">
@@ -44,7 +42,7 @@
 					<div class="header-search col-md-4 col-lg-4 col-xs-12">
 						<form action="#" name="search-inp">
 							<span class="search-icon"></span>
-							<input type="text" class="no-ou" value="Поиск" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"><input type="submit" value="ИСКАТЬ" >
+							<input type="text" class="no-ou" value="Поиск" name="s" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"><input type="submit" value="ИСКАТЬ" >
 						</form>
 					</div>
 
