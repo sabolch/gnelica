@@ -75,4 +75,36 @@ $(document).ready(function() {
       }
     });
  
+  $('#send-form-button').click( function(event){
+    alert('sss');
+    
+    var empty = true;
+    $('.priom  input[name="phone"]').each(function(o){
+      var str = $(this).val().trim();
+        if ((str == "") || (str == "Телефон для уточнения размера бытовки")){
+          empty = false;
+        }
+    });
+
+    if (empty == false){
+      $(this).parent().find('.error').css('display','block');
+      return false;
+
+    }else{
+      
+      $.ajax({
+        type: 'POST',
+        url: '/sendmessage.php',
+        data: $('.priom').serialize(),
+        success: function(data) {
+        }
+      });
+      
+    }
+    empty = true;
+    $(this).parent().find('.error').css('display','none');
+
+    return false;
+  });
+
 });
