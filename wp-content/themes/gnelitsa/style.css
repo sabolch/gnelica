@@ -291,6 +291,7 @@ nav .pagination li .active {
 /* line 139, ./sass/_info_blog.scss */
 .priom .form_error {
   margin-top: 15px;
+  display: none;
 }
 /* line 141, ./sass/_info_blog.scss */
 .priom .form_error .col-md-12 {
