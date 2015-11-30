@@ -43,7 +43,7 @@
 					<div class="header-search col-md-4 col-lg-4 col-xs-12">
 						<form action="#" name="search-inp">
 							<span class="search-icon"></span>
-							<input type="text" class="no-ou" value="Поиск" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"><input type="submit" value="ИСКАТЬ" >
+							<input type="text" class="no-ou" value="Поиск" name="s" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"><input type="submit" value="ИСКАТЬ" >
 						</form>
 					</div>
 

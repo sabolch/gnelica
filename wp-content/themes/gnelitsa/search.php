@@ -1,47 +1,36 @@
-<?php
-/**
- * The template for displaying search results pages.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package gnelitsa
- */
+	<?php get_header(); ?>
 
-get_header(); ?>
+	<div class="container-fluid jo_container_fluid">
+        <div class="container">
+            <div class="row">
+                <?php include_once ('breadcramp.php') ?>
+                <div class="jo_big_title col-md-12">
+                    <h1>Результаты поиска</h1>
+                    <hr>
+                </div>
+                
+                <?php if ( have_posts() ) : ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+             
 
-		<?php if ( have_posts() ) : ?>
+                <?php /* Start the Loop */ ?>
+                <?php while ( have_posts() ) : the_post(); ?>
+                <a href="<?php the_permalink(); ?>"><?php the_title();  ?></a> <br><br>
+                
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'gnelitsa' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+                <?php endwhile; ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+                <?php the_posts_navigation(); ?>
 
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-				?>
+                <?php else : ?>
 
-			<?php endwhile; ?>
+                <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			<?php the_posts_navigation(); ?>
+                <?php endif; ?>
+               
+            </div>
+        </div>
+    </div>
+					
 
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+	<?php get_footer(); ?>
