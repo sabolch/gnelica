@@ -26,13 +26,13 @@ Template name: Запись на прием
                 <div class="clearfix"></div>
                 <div class="col-md-12 form_error">
                     <div class="col-md-12">
-                        <p><img src="img/error_icon.png" alt="">
+                        <p><img src="<?php echo get_template_directory_uri(); ?>/img//error_icon.png" alt="">
                         ОШИБКА! Пожалуйста, заполните все поля перед отправкой заявки!</p>
                     </div>
                 </div>
                 <div class="col-md-12 form_sended">
                     <div class="col-md-12">
-                        <p><img src="img/error_icon.png" alt="">
+                        <p><img src="<?php echo get_template_directory_uri(); ?>/img//error_icon.png" alt="">
                         Спасибо. Ваша заявка принята. Наш меджер свяжется с вами в ближайшее время </p>
                     </div>
                 </div>
