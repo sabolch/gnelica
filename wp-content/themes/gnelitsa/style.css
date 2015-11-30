@@ -311,6 +311,23 @@ nav .pagination li .active {
   margin-right: 5px;
 }
 
+.form_sended{
+  margin-top: 15px;
+  display: none;
+}
+
+.form_sended .col-md-12 {
+  background-color: green;
+  padding: 20px 15px;
+}
+/* line 145, ./sass/_info_blog.scss */
+.form_sended p {
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "pt_sansbold";
+}
+
 /* line 158, ./sass/_info_blog.scss */
 .videoblog div {
   margin-bottom: 15px;
