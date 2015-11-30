@@ -1,3 +1,5 @@
+
+
 	<?php get_header(); ?>
 
 	<div class="container-fluid jo_container_fluid">
@@ -10,9 +12,7 @@
                 </div>
                 
                 
-                <?php while ( have_posts() ) : the_post(); ?>
-                <?php the_content(); ?>        
-                <?php endwhile; ?>
+                <h1>zzzz</h1>
 
                 <hr class=jos_dash>
                 <?php include_once('social.php') ?>

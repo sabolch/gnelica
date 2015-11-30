@@ -3,8 +3,9 @@
 <head>
 
 	<meta charset="utf-8" />
-
-	<title>Гнелица Н.Н.</title>
+	<!-- Комментарий -->
+	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+	
 	<meta content="" name="description" />
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png" />
 
