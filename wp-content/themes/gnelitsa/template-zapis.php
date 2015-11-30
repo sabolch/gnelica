@@ -15,7 +15,7 @@ Template name: Запись на прием
             </div>
             <form action="" class="priom" >
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <input type="text" name="uname" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя">
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <input type="text" name="phone" placeholder="Телефон">

@@ -2219,3 +2219,8 @@ body {
     height: 650px !important;
   }
 }
+
+
+.footer-menu{
+  margin-top: -25px;
+}

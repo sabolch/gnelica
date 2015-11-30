@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 30 2015 г., 23:15
+-- Время создания: Ноя 30 2015 г., 23:40
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -278,7 +278,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=779 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=854 ;
 
 --
 -- Дамп данных таблицы `wp_postmeta`
@@ -876,7 +876,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (657, 162, '_edit_lock', '1448888266:1'),
 (658, 164, '_edit_last', '1'),
 (659, 164, '_wp_page_template', 'template-zapis.php'),
-(660, 164, '_edit_lock', '1448910661:1'),
+(660, 164, '_edit_lock', '1448911589:1'),
 (661, 166, '_edit_last', '1'),
 (662, 166, '_wp_page_template', 'default'),
 (663, 166, '_edit_lock', '1448888324:1'),
@@ -987,7 +987,74 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (775, 186, 'автор_ответа', 'Гнелица Н.Н.'),
 (776, 186, '_автор_ответа', 'field_565afafee4ce8'),
 (777, 186, 'текст_ответа', 'Как было показано выше, пластичность образа возможна. Гений изящно аккумулирует экзистенциализм, что-то подобное можно встретить в работах Ауэрбаха и Тандлера. Манерничанье, так или иначе, многопланово образует героический миф, так Г.Корф формулирует собственную антитезу. Флобер, описывая нервный припадок Эммы Бовари, переживает его сам: художественное переживание относительно. Мистерия, на первый взгляд, готично имеет катарсис. Механизм эвокации, так или иначе, монотонно иллюстрирует неизменный синтаксис искусства, это же положение обосновывал Ж.Польти в книге "Тридцать шесть драматических ситуаций".'),
-(778, 186, '_текст_ответа', 'field_565afb12e4ce9');
+(778, 186, '_текст_ответа', 'field_565afb12e4ce9'),
+(779, 187, '_menu_item_type', 'post_type'),
+(780, 187, '_menu_item_menu_item_parent', '0'),
+(781, 187, '_menu_item_object_id', '162'),
+(782, 187, '_menu_item_object', 'page'),
+(783, 187, '_menu_item_target', ''),
+(784, 187, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(785, 187, '_menu_item_xfn', ''),
+(786, 187, '_menu_item_url', ''),
+(788, 188, '_menu_item_type', 'post_type'),
+(789, 188, '_menu_item_menu_item_parent', '0'),
+(790, 188, '_menu_item_object_id', '160'),
+(791, 188, '_menu_item_object', 'page'),
+(792, 188, '_menu_item_target', ''),
+(793, 188, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(794, 188, '_menu_item_xfn', ''),
+(795, 188, '_menu_item_url', ''),
+(797, 189, '_menu_item_type', 'post_type'),
+(798, 189, '_menu_item_menu_item_parent', '0'),
+(799, 189, '_menu_item_object_id', '54'),
+(800, 189, '_menu_item_object', 'page'),
+(801, 189, '_menu_item_target', ''),
+(802, 189, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(803, 189, '_menu_item_xfn', ''),
+(804, 189, '_menu_item_url', ''),
+(806, 190, '_edit_last', '1'),
+(807, 190, '_edit_lock', '1448911772:1'),
+(808, 190, '_wp_page_template', 'default'),
+(809, 192, '_menu_item_type', 'post_type'),
+(810, 192, '_menu_item_menu_item_parent', '0'),
+(811, 192, '_menu_item_object_id', '190'),
+(812, 192, '_menu_item_object', 'page'),
+(813, 192, '_menu_item_target', ''),
+(814, 192, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(815, 192, '_menu_item_xfn', ''),
+(816, 192, '_menu_item_url', ''),
+(818, 193, '_menu_item_type', 'post_type'),
+(819, 193, '_menu_item_menu_item_parent', '0'),
+(820, 193, '_menu_item_object_id', '166'),
+(821, 193, '_menu_item_object', 'page'),
+(822, 193, '_menu_item_target', ''),
+(823, 193, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(824, 193, '_menu_item_xfn', ''),
+(825, 193, '_menu_item_url', ''),
+(827, 194, '_menu_item_type', 'post_type'),
+(828, 194, '_menu_item_menu_item_parent', '0'),
+(829, 194, '_menu_item_object_id', '164'),
+(830, 194, '_menu_item_object', 'page'),
+(831, 194, '_menu_item_target', ''),
+(832, 194, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(833, 194, '_menu_item_xfn', ''),
+(834, 194, '_menu_item_url', ''),
+(836, 195, '_menu_item_type', 'post_type'),
+(837, 195, '_menu_item_menu_item_parent', '0'),
+(838, 195, '_menu_item_object_id', '147'),
+(839, 195, '_menu_item_object', 'page'),
+(840, 195, '_menu_item_target', ''),
+(841, 195, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(842, 195, '_menu_item_xfn', ''),
+(843, 195, '_menu_item_url', ''),
+(845, 196, '_menu_item_type', 'post_type'),
+(846, 196, '_menu_item_menu_item_parent', '0'),
+(847, 196, '_menu_item_object_id', '76'),
+(848, 196, '_menu_item_object', 'page'),
+(849, 196, '_menu_item_target', ''),
+(850, 196, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(851, 196, '_menu_item_xfn', ''),
+(852, 196, '_menu_item_url', '');
 
 -- --------------------------------------------------------
 
@@ -1024,7 +1091,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=187 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=197 ;
 
 --
 -- Дамп данных таблицы `wp_posts`
@@ -1218,7 +1285,17 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (183, 1, '2015-11-30 18:25:45', '2015-11-30 15:25:45', '', 'Вопрос №2', '', 'publish', 'closed', 'closed', '', '%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81-%e2%84%962', '', '', '2015-11-30 18:25:45', '2015-11-30 15:25:45', '', 0, 'http://gnelica.loc/?post_type=talk&#038;p=183', 0, 'talk', '', 0),
 (184, 1, '2015-11-30 18:29:03', '2015-11-30 15:29:03', '', 'Вопрос №3', '', 'publish', 'closed', 'closed', '', '%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81-%e2%84%963', '', '', '2015-11-30 18:29:03', '2015-11-30 15:29:03', '', 0, 'http://gnelica.loc/?post_type=talk&#038;p=184', 0, 'talk', '', 0),
 (185, 1, '2015-11-30 18:29:06', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2015-11-30 18:29:06', '0000-00-00 00:00:00', '', 0, 'http://gnelica.loc/?post_type=talk&p=185', 0, 'talk', '', 0),
-(186, 1, '2015-11-30 18:30:44', '2015-11-30 15:30:44', '', 'Вопрос №4', '', 'publish', 'closed', 'closed', '', '%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81-%e2%84%964', '', '', '2015-11-30 18:30:44', '2015-11-30 15:30:44', '', 0, 'http://gnelica.loc/?post_type=talk&#038;p=186', 0, 'talk', '', 0);
+(186, 1, '2015-11-30 18:30:44', '2015-11-30 15:30:44', '', 'Вопрос №4', '', 'publish', 'closed', 'closed', '', '%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81-%e2%84%964', '', '', '2015-11-30 18:30:44', '2015-11-30 15:30:44', '', 0, 'http://gnelica.loc/?post_type=talk&#038;p=186', 0, 'talk', '', 0),
+(187, 1, '2015-11-30 22:31:43', '2015-11-30 19:31:43', ' ', '', '', 'publish', 'closed', 'closed', '', '187', '', '', '2015-11-30 22:32:03', '2015-11-30 19:32:03', '', 0, 'http://gnelica.loc/?p=187', 3, 'nav_menu_item', '', 0),
+(188, 1, '2015-11-30 22:31:43', '2015-11-30 19:31:43', ' ', '', '', 'publish', 'closed', 'closed', '', '188', '', '', '2015-11-30 22:32:03', '2015-11-30 19:32:03', '', 0, 'http://gnelica.loc/?p=188', 2, 'nav_menu_item', '', 0),
+(189, 1, '2015-11-30 22:31:43', '2015-11-30 19:31:43', ' ', '', '', 'publish', 'closed', 'closed', '', '189', '', '', '2015-11-30 22:32:03', '2015-11-30 19:32:03', '', 0, 'http://gnelica.loc/?p=189', 1, 'nav_menu_item', '', 0),
+(190, 1, '2015-11-30 22:31:40', '2015-11-30 19:31:40', '', 'Отзывы', '', 'publish', 'closed', 'closed', '', '%d0%be%d1%82%d0%b7%d1%8b%d0%b2%d1%8b', '', '', '2015-11-30 22:31:40', '2015-11-30 19:31:40', '', 0, 'http://gnelica.loc/?page_id=190', 0, 'page', '', 0),
+(191, 1, '2015-11-30 22:31:40', '2015-11-30 19:31:40', '', 'Отзывы', '', 'inherit', 'closed', 'closed', '', '190-revision-v1', '', '', '2015-11-30 22:31:40', '2015-11-30 19:31:40', '', 190, 'http://gnelica.loc/?p=191', 0, 'revision', '', 0),
+(192, 1, '2015-11-30 22:32:03', '2015-11-30 19:32:03', ' ', '', '', 'publish', 'closed', 'closed', '', '192', '', '', '2015-11-30 22:32:03', '2015-11-30 19:32:03', '', 0, 'http://gnelica.loc/?p=192', 4, 'nav_menu_item', '', 0),
+(193, 1, '2015-11-30 22:33:48', '2015-11-30 19:33:48', ' ', '', '', 'publish', 'closed', 'closed', '', '193', '', '', '2015-11-30 22:33:48', '2015-11-30 19:33:48', '', 0, 'http://gnelica.loc/?p=193', 3, 'nav_menu_item', '', 0),
+(194, 1, '2015-11-30 22:33:48', '2015-11-30 19:33:48', ' ', '', '', 'publish', 'closed', 'closed', '', '194', '', '', '2015-11-30 22:33:48', '2015-11-30 19:33:48', '', 0, 'http://gnelica.loc/?p=194', 2, 'nav_menu_item', '', 0),
+(195, 1, '2015-11-30 22:33:48', '2015-11-30 19:33:48', ' ', '', '', 'publish', 'closed', 'closed', '', '195', '', '', '2015-11-30 22:33:48', '2015-11-30 19:33:48', '', 0, 'http://gnelica.loc/?p=195', 1, 'nav_menu_item', '', 0),
+(196, 1, '2015-11-30 22:33:48', '2015-11-30 19:33:48', ' ', '', '', 'publish', 'closed', 'closed', '', '196', '', '', '2015-11-30 22:33:48', '2015-11-30 19:33:48', '', 0, 'http://gnelica.loc/?p=196', 4, 'nav_menu_item', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1234,7 +1311,7 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Дамп данных таблицы `wp_terms`
@@ -1242,7 +1319,9 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 (1, 'Без рубрики', '%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8', 0),
-(2, 'Главное меню', '%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d0%be%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e', 0);
+(2, 'Главное меню', '%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d0%be%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e', 0),
+(3, 'footer1', 'footer1', 0),
+(4, 'footer2', 'footer2', 0);
 
 -- --------------------------------------------------------
 
@@ -1277,7 +1356,15 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (171, 2, 0),
 (180, 2, 0),
 (181, 2, 0),
-(182, 2, 0);
+(182, 2, 0),
+(187, 3, 0),
+(188, 3, 0),
+(189, 3, 0),
+(192, 3, 0),
+(193, 4, 0),
+(194, 4, 0),
+(195, 4, 0),
+(196, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -1295,7 +1382,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Дамп данных таблицы `wp_term_taxonomy`
@@ -1303,7 +1390,9 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
 (1, 1, 'category', '', 0, 1),
-(2, 2, 'nav_menu', '', 0, 14);
+(2, 2, 'nav_menu', '', 0, 14),
+(3, 3, 'nav_menu', '', 0, 4),
+(4, 4, 'nav_menu', '', 0, 4);
 
 -- --------------------------------------------------------
 
@@ -1345,7 +1434,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (17, 1, 'metaboxhidden_nav-menus', 'a:6:{i:0;s:10:"add-slider";i:1;s:10:"add-review";i:2;s:16:"add-video_review";i:3;s:11:"add-partner";i:4;s:12:"add-post_tag";i:5;s:15:"add-post_format";}'),
 (18, 1, 'wp_user-settings', 'libraryContent=browse&advImgDetails=show&editor=html'),
 (19, 1, 'wp_user-settings-time', '1448784791'),
-(20, 1, 'nav_menu_recently_edited', '2');
+(20, 1, 'nav_menu_recently_edited', '4');
 
 -- --------------------------------------------------------
 

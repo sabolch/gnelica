@@ -24,16 +24,48 @@
 						<span>Ссылки</span>
 						<ul>
 							<div class="left-nav col-md-6 col-xs-12 col-sm-6">
-							<li><a href="#">О докторе</a></li>
-							<li><a href="#">Лечение</a></li>
-							<li><a href="#">Истории пациентов</a></li>
-							<li class="border-none"><a href="#">Отзывы</a></li>
+							<? 
+						       $args = array(
+						         'theme_location'  => '',
+						         'menu'            => 'footer1', 
+						         'container'       => flase, 
+						         'container_class' => '', 
+						         'container_id'    => '',
+						         'menu_class'      => 'menu', 
+						         'menu_id'         => '',
+						         'echo'            => true,
+						         'fallback_cb'     => 'wp_page_menu',
+						         'before'          => '',
+						         'after'           => '',
+						         'link_before'     => '',
+						         'link_after'      => '',
+						         'items_wrap'      => '<ul class="footer-menu">%3$s</ul>',
+						         'depth'           => 0
+						       );
+						       wp_nav_menu($args ); 
+						      ?>
 							</div>
 							<div class="right-nav col-md-6 col-xs-12 col-sm-6 ">
-							<li><a href="#">Разговор с пациентом</a></li>
-							<li><a href="#">Записаться на прием</a></li>
-							<li><a href="#">Инфоблог</a></li>
-							<li class="border-none"><a href="#">Контакты</a></li>
+							<? 
+						       $args = array(
+						         'theme_location'  => '',
+						         'menu'            => 'footer2', 
+						         'container'       => flase, 
+						         'container_class' => '', 
+						         'container_id'    => '',
+						         'menu_class'      => 'menu', 
+						         'menu_id'         => '',
+						         'echo'            => true,
+						         'fallback_cb'     => 'wp_page_menu',
+						         'before'          => '',
+						         'after'           => '',
+						         'link_before'     => '',
+						         'link_after'      => '',
+						         'items_wrap'      => '<ul class="footer-menu">%3$s</ul>',
+						         'depth'           => 0
+						       );
+						       wp_nav_menu($args ); 
+						      ?>
 							</div>
 						</ul>
 					</div>
