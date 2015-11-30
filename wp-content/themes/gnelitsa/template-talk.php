@@ -17,6 +17,7 @@ Template Name: Разговор с пациентом
                 <div class="question">
                     <a href="#">Задать вопрос</a>
                 </div>
+                <?php $a=1; ?>
                 <?php 
                   wp_reset_query(); 
                   $wp_query = new WP_Query(array(
@@ -33,7 +34,7 @@ Template Name: Разговор с пациентом
                            <?php echo (get_post_meta($post->ID, 'текст_вопроса', true)); ?> 
                         </p>
                     </div>
-                    <div class="answer">
+                    <div class="answer" id="text<?php echo $a; ?>" style="display:none; text-align:justify;">
                         <span class="admin-name"><?php echo (get_post_meta($post->ID, 'автор_ответа', true)); ?> </span>
                         <span class="date"><? the_time('d.m.Y'); ?></span>
                         <div class="img-box">
@@ -45,9 +46,10 @@ Template Name: Разговор с пациентом
                     </div>
 
                     <div class="hide-answer">
-                        <a href="#" >скрыть ответ</a>
+                        <a href="javascript:look('text<?php echo $a; ?>');" id="a-text<?php echo $a; ?>" >Показать</a>
                     </div>
                 </div>
+                <?php $a++; ?>
                 <?php endwhile; ?>
                 
                 <div class="pagination">
@@ -70,5 +72,16 @@ Template Name: Разговор с пациентом
             </div>
         </div>
     </section>
-
+    <script>
+    function look(t){
+      p=document.getElementById(t);
+      l=document.getElementById("a-"+t);
+      if(p.style.display=="none"){
+        l.innerHTML="скрыть";
+        p.style.display="block";}
+      else{
+        l.innerHTML="показать";
+        p.style.display="none";}
+    }
+</script>
 <?php get_footer(); ?>
