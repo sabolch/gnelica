@@ -58,52 +58,26 @@
 			<div class="row">
 				<span class="toggle-menu">Меню</span>
 				<div class="header-nav center col-md-12 col-lg-12 col-xs-12">
-					<ul class="menu_navbar">
-						<li class="current"><a class="menu-gl" href="#">Главная</a></li>
-						<li>
-						    <a href="/?p=54">О докторе</a>
-						    <span class="li_div">
-						        <a href="#">Lorem Ipsum</a>
-						        <a href="#">Proin gravida nibh vel</a>
-						        <a href="#">velit auctor aliquet</a>
-						        <a href="#">Aenean sollicitudin</a>
-						        <a href="#">lorem quis bibendum</a>
-						    </span>
-				        </li>
-						<li>
-						    <a href="#">Лечение</a>
-                            <span class="li_div">
-						        <a href="#">Lorem Ipsum</a>
-						        <a href="#">Proin gravida nibh vel</a>
-						        <a href="#">velit auctor aliquet</a>
-						        <a href="#">Aenean sollicitudin</a>
-						        <a href="#">lorem quis bibendum</a>
-						    </span>
-				        </li>
-						<li><a href="#">Истории пациентов</a></li>
-						<li><a href="talk.html">Разговор с пациентом</a></li>
-						<li>
-                            <a href="#">Записаться на прием</a>
-                            <span class="li_div">
-						        <a href="#">Lorem Ipsum</a>
-						        <a href="#">Proin gravida nibh vel</a>
-						        <a href="#">velit auctor aliquet</a>
-						        <a href="#">Aenean sollicitudin</a>
-						        <a href="#">lorem quis bibendum</a>
-						    </span>
-				        </li>
-						<li>
-						    <a href="#">Инфоблог</a>
-                            <span class="li_div">
-						        <a href="#">Lorem Ipsum</a>
-						        <a href="#">Proin gravida nibh vel</a>
-						        <a href="#">velit auctor aliquet</a>
-						        <a href="#">Aenean sollicitudin</a>
-						        <a href="#">lorem quis bibendum</a>
-						    </span>
-				        </li>
-						<li><a href="/?p=76">Контакты</a></li>
-					</ul>
+					<? 
+				       $args = array(
+				         'theme_location'  => '',
+				         'menu'            => 'Главное меню', 
+				         'container'       => flase, 
+				         'container_class' => '', 
+				         'container_id'    => '',
+				         'menu_class'      => 'menu', 
+				         'menu_id'         => '',
+				         'echo'            => true,
+				         'fallback_cb'     => 'wp_page_menu',
+				         'before'          => '',
+				         'after'           => '',
+				         'link_before'     => '',
+				         'link_after'      => '',
+				         'items_wrap'      => '<ul class="menu_navbar">%3$s</ul>',
+				         'depth'           => 0
+				       );
+				       wp_nav_menu($args ); 
+				      ?>
 				</div>
 			</div>
 		</div>

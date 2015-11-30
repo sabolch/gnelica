@@ -684,8 +684,9 @@ nav .pagination li .active {
   padding: 25px 0 !important;
 }
 /* line 279, ./sass/_new.scss */
-.menu_navbar li .li_div {
+.menu_navbar li .sub-menu {
   width: 200px;
+  text-align: center;
   background-color: #ececec;
   position: absolute;
   left: 50%;
@@ -695,9 +696,15 @@ nav .pagination li .active {
   display: none;
   border: 1px solid #d2d3d4;
   border-bottom: none;
+  padding: 0;
+}
+.menu_navbar li .sub-menu li {
+  width: 110%;
+  text-transform: none;
+  
 }
 /* line 290, ./sass/_new.scss */
-.menu_navbar li .li_div a {
+.menu_navbar li .sub-menu a {
   display: block !important;
   width: 100%;
   padding: 15px 0 !important;
@@ -710,11 +717,11 @@ nav .pagination li .active {
   transition: all .3s ease;
 }
 /* line 301, ./sass/_new.scss */
-.menu_navbar li .li_div a:hover {
+.menu_navbar li .sub-menu a:hover {
   background-color: #fff;
 }
 /* line 307, ./sass/_new.scss */
-.menu_navbar li:hover .li_div {
+.menu_navbar li:hover .sub-menu {
   display: block;
 }
 
