@@ -55,25 +55,25 @@ $(document).ready(function() {
  
   });
 
-    $('#link1').click(function(){
-      if(jQuery.browser.msie && parseInt(jQuery.browser.version)==6){
-        if($('#look1').css("display")=="block"){
-          $('#look1').css("display", "none");
-        }
-        else{
-          $('#look1').css("display", "block");
-        }
+  $('#link1').click(function(){
+    if(jQuery.browser.msie && parseInt(jQuery.browser.version)==6){
+      if($('#look1').css("display")=="block"){
+        $('#look1').css("display", "none");
       }
       else{
-        $('#look1').toggle("slow");
+        $('#look1').css("display", "block");
       }
-      if($('#link1').text()=='скрыть ответ'){
-        $('#link1').text('Показать ответ');
-      }
-      else{
-        $('#link1').text('скрыть ответ');
-      }
-    });
+    }
+    else{
+      $('#look1').toggle("slow");
+    }
+    if($('#link1').text()=='скрыть ответ'){
+      $('#link1').text('Показать ответ');
+    }
+    else{
+      $('#link1').text('скрыть ответ');
+    }
+  });
  
   $('#send-form-button').click( function(event){
     //alert('sss');
