@@ -55,6 +55,16 @@ $(document).ready(function() {
  
   });
 
+  $('.see_more_disease').click(function(){
+    $(this).parent().parent().parent().find('.treatment-href_hidden').fadeIn();
+    $(this).css('display','none');
+    return false;
+
+  }); 
+
+
+
+
   $('#link1').click(function(){
     if(jQuery.browser.msie && parseInt(jQuery.browser.version)==6){
       if($('#look1').css("display")=="block"){
@@ -125,3 +135,38 @@ $(document).ready(function() {
 
 });
 
+
+
+jQuery(document).ready(function($){
+
+  /**
+   * Кнопка наверх на jQuery. 
+   * Автор: Тимур Камаев, wp-kama.ru
+   * version 2.1
+   */
+  $('body').append('<style>\
+    .scrollTop{\
+      display:none; z-index:9999; position:fixed; bottom:10px; left:90%; width:50px; height:70px;\
+      background:url(http://gnelica.loc/wp-content/themes/gnelitsa/img/arrow_up.png) 0 0 no-repeat;\
+    }\
+    .scrollTop:hover{ background-position:0 -76px;}\
+  </style>');
+
+  var
+  speed = 500,
+  $scrollTop = $('<a href="#" class="scrollTop">').appendTo('body');        
+
+  $scrollTop.click(function(e){
+    e.preventDefault();
+
+    $( 'html:not(:animated),body:not(:animated)' ).animate({ scrollTop: 0}, speed );
+  });
+
+  //появление
+  function show_scrollTop(){
+    ( $(window).scrollTop() > 300 ) ? $scrollTop.fadeIn(600) : $scrollTop.fadeOut(600);
+  }
+  $(window).scroll( function(){ show_scrollTop(); } );
+  show_scrollTop();
+
+});

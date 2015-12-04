@@ -125,13 +125,17 @@ table {
     .header-nav ul .current a {
       color: #7f7f7f; }
     .header-nav ul li {
-      padding-right: 18px;
+      //padding-right: 20px;
+      margin-right: 45px;
       display: inline-block;
       font-size: 13px; }
+      .header-nav ul li:last-child{
+        margin-right: 0px;
+      }
       .header-nav ul li a {
         text-transform: uppercase;
         line-height: 15px;
-        font-family: "BankGothicCMdBT-Medium";
+         font-family: "RobotoMedium";
         color: #1585b5;
         text-decoration: none; }
       .header-nav ul li a:hover {
@@ -309,7 +313,7 @@ table {
 .slider_text_block h2 {
     font-size: 58px;
     color: #1585b5;
-    font-family: "BankGothicCMdBT-Medium";
+    font-family: "RobotoMedium";
     text-transform: uppercase;
 }
 .slider_text_block p {
@@ -616,7 +620,7 @@ table {
 .talk-h1 {
   position: relative;
   font-size: 33px;
-  font-family: "BankGothicCMdBT-Medium";
+  font-family: "RobotoMedium";
   border-bottom: 1px solid #e7e6e6;
   padding-bottom: 10px; }
 

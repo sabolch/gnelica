@@ -704,7 +704,96 @@ function stat_register() {
     register_post_type('stat', $args);
 }
 
-function kama_breadcrumbs( $sep = 0, $l10n = array(), $args = array() ){
+
+add_action('init', 'disease_register');
+function disease_register() {
+    $args = array(
+        'label'               => __('Заболевания'),
+        'labels'              => array(
+            'name'               => __('Заболевания'),
+            'singular_name'      => __('Заболевания'),
+            'menu_name'          => __('Заболевания'),
+            'all_items'          => __('Заболевания'),
+            'add_new'            => _x('Добавить заболевание', 'disease'),
+            'add_new_item'       => __('Новое заболевание'),
+            'edit_item'          => __('Редактировать заболевание'),
+            'new_item'           => __('Новое заболевание'),
+            'view_item'          => __('Заболевание'),
+            'not_found'          => __('Заболевание не найдено'),
+            'not_found_in_trash' => __('Удаленных заболеваний нет'),
+            'search_items'       => __('Найти заболевание')
+        ),
+        'description'         => __('Заболевания'),
+        'public'              => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'show_ui'             => true,
+        'show_in_nav_menus'   => true,
+        'show_in_menu'        => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'capability_type'     => 'post',
+        'hierarchical'        => false,
+        'supports'            => array(
+            'title',
+            'editor',
+            'thumbnail',
+   
+   
+   
+        ),
+        'has_archive'         => false,
+        'rewrite'             => array(
+            'slug'       => 'disease',
+            'with_front' => false
+        )
+    );
+    register_post_type('disease', $args);
+}
+
+add_action('init', 'disease_category_taxonomy_register', 0);
+function disease_category_taxonomy_register() {
+    $args = array(
+        'labels'            => array(
+            'name'                       => _x('Категория', 'disease_category'),
+            'singular_name'              => _x('Категория', 'disease_category'),
+            'menu_name'                  => __('Категория'),
+            'all_items'                  => __('Категория'),
+            'new_item_name'              => __('Новая категория'),
+            'add_new_item'               => __('Добавить категорию'),
+            'edit_item'                  => __('Редактировать категорию'),
+            'update_item'                => __('Обновить категорию'),
+            'search_items'               => __('Искать категорию'),
+            'add_or_remove_items'        => __('Добавить или удалить категорию'),
+            'choose_from_most_used'      => __('Выбрать из часто используемых категорий'),
+        ),
+        'hierarchical'      => true,
+        'public'            => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'show_in_nav_menus' => true,
+        'show_tagcloud'     => true,
+        'query_var'         => 'disease_category',
+        'rewrite'           => array(
+            'slug'         => 'disease_category',
+            'with_front'   => true,
+            'hierarchical' => true,
+        ),
+    );
+
+    register_taxonomy('disease_category', 'disease', $args);
+}
+
+
+/** 
+ * Хлебные крошки для WordPress (breadcrumbs)
+ *
+ * $sep  - разделитель. По умолчанию ' » '
+ * $l10n - массив. для локализации. См. переменную $default_l10n.
+ * $args - массив. дополнительные аргументы.
+ * version 0.8
+*/
+function kama_breadcrumbs( $sep = '', $l10n = array(), $args = array() ){
     global $post, $wp_query, $wp_post_types;
 
     // Локализация
@@ -721,39 +810,54 @@ function kama_breadcrumbs( $sep = 0, $l10n = array(), $args = array() ){
         'tag'        => 'Записи по метке: <b>%s</b>',
         'tax_tag'    => '%s из "%s" по тегу: <b>%s</b>',
     );
-    
+
     // Параметры по умолчанию
     $default_args = array(
-        'on_front_page'   => true, // выводить крошки на главной странице
-        'show_post_title' => true, // показывать ли название записи в конце (последний элемент). Для записей, страниц, вложений
+        'on_front_page'   => true,  // выводить крошки на главной странице
+        'show_post_title' => true,  // показывать ли название записи в конце (последний элемент). Для записей, страниц, вложений
         'sep'             => ' » ', // разделитель
+        'markup'          => 'schema.org', // микроразметка. Может быть: rdf.data-vocabulary.org или schema.org
+        'priority_tax'    => array('category'), // приоритетные таксономии, если запись в нескольких таксах
     );
-    
+
     // Фильтрует аргументы по умолчанию.
     $default_args = apply_filters('kama_breadcrumbs_default_args', $default_args );
-    
+
     $loc  = (object) array_merge( $default_l10n, $l10n );
     $args = (object) array_merge( $default_args, $args );
 
-    if( $sep === 0 ) $sep = $args->sep;
+    if( ! $sep ) $sep = $args->sep;
 
-    $w1 = '<div class="kama_breadcrumbs" prefix="v: http://rdf.data-vocabulary.org/#">';
-    $w2 = '</div>';
-    $patt1 = '<span typeof="v:Breadcrumb"><a href="%s" rel="v:url" property="v:title">';
-    $sep .= '</span>'; // закрываем span после разделителя!
-    $linkpatt = $patt1.'%s</a>';
-    
-    
+    // микроразметка ---
+    // rdf.data-vocabulary.org
+    if( $args->markup == 'rdf.data-vocabulary.org' ){
+        $w1 = '<div class="kama_breadcrumbs" prefix="v: http://rdf.data-vocabulary.org/#">';
+        $w2 = '</div>';
+        $patt1 = '<span typeof="v:Breadcrumb"><a href="%s" rel="v:url" property="v:title">';
+        $sep .= '</span>'; // закрываем span после разделителя!
+        $linkpatt = $patt1.'%s</a>';
+    }
+    // schema.org
+    elseif( $args->markup == 'schema.org' ){
+        $w1 = '<div class="kama_breadcrumbs" vocab="http://schema.org/" typeof="BreadcrumbList">';
+        $w2 = '</div>';
+        $patt1 = '<span property="itemListElement" typeof="ListItem"><a href="%s" property="item" typeof="WebPage"><span property="name">';
+        $sep .= '</span>'; // закрываем span после разделителя!
+        $linkpatt = $patt1.'%s</span></a>';     
+    }
+
+    $ptype = & $wp_post_types[ $post->post_type ];
+
     // Вывод
     $pg_end = '';
     if( $paged = $wp_query->query_vars['paged'] ){
         $pg_patt = $patt1;
-        $pg_end = '</a>'. $sep . sprintf( $loc->paged, $paged );
+        $pg_end  = '</a>'. $sep . sprintf( $loc->paged, $paged );
     }
 
     $out = '';
     if( is_front_page() ){
-        return $args->on_front_page ? ( print $w1 .( $paged ? sprintf( $pg_patt, home_url() ) : '' ) . $loc->home . $pg_end . $w2 ) : '';
+        return $args->on_front_page ? ( print $w1 .( $paged ? sprintf( $pg_patt, get_bloginfo('url') ) : '' ) . $loc->home . $pg_end . $w2 ) : '';
     }
     elseif( is_404() ){
         $out = $loc->_404; 
@@ -778,8 +882,8 @@ function kama_breadcrumbs( $sep = 0, $l10n = array(), $args = array() ){
             $out = $y_link . $sep . $m_link . $sep . get_the_time('l');
     }
 
-    // Страницы и древовидные типы записей
-    elseif( is_singular() && $wp_post_types[ $post->post_type ]->hierarchical ){
+    // Древовидные записи
+    elseif( is_singular() && $ptype->hierarchical ){
         $parent = $post->post_parent;
         $crumbs = array();
         while( $parent ){
@@ -788,78 +892,103 @@ function kama_breadcrumbs( $sep = 0, $l10n = array(), $args = array() ){
             $parent = $page->post_parent;
         }
         $crumbs = array_reverse( $crumbs );
-        
+
         foreach( $crumbs as $crumb ) $out .= $crumb . $sep;
-        
+
         $out = $out . ( $args->show_post_title ? $post->post_title : '');
     }
     // Таксономии, вложения и не древовидные типы записей
-    else
-    {
+    else {
         // Определяем термины
         if( is_singular() ){
-            if( ! $taxonomies ){
-                $taxonomies = get_taxonomies( array('hierarchical' => true, 'public' => true) );
-                if( count( $taxonomies ) == 1 ) $taxonomies = 'category';
-            }
-            if( $term = get_the_terms( $post->post_parent ? $post->post_parent : $post->ID, $taxonomies ) ){
+            $taxonomies   = get_object_taxonomies( $post->post_type );
+            // оставим только древовидные и публичные, мало ли...
+            $taxonomies   = array_intersect( $taxonomies, get_taxonomies( array('hierarchical' => true, 'public' => true) ) );
+            $priority_tax = array_intersect( $taxonomies, $args->priority_tax ); // пробуем найти приоритетные
+            // получаем название вожделенной таксы
+            $taxonomy = $priority_tax ? array_shift( $priority_tax ) : array_shift( $taxonomies );
+
+            $pid = ($post->post_parent ? $post->post_parent : $post->ID); // для вложений
+
+            if( $term = get_the_terms( $pid, $taxonomy ) )
                 $term = array_shift( $term );
-            }
         }
         else
             $term = $wp_query->get_queried_object();
-        
 
         //if( ! $term && ! is_attachment() ) return print "Error: Taxonomy is not defined!"; 
-        
+
         if( $term ){
             $term = apply_filters('kama_breadcrumbs_term', $term );
-            
+
             $pg_term_start = ( $paged && $term->term_id ) ? sprintf( $pg_patt, get_term_link( (int) $term->term_id, $term->taxonomy ) ) : '';
 
+            // attachment
             if( is_attachment() ){
                 if( ! $post->post_parent )
                     $out = sprintf( $loc->attachment, $post->post_title );
                 else
                     $out = __crumbs_tax( $term->term_id, $term->taxonomy, $sep, $linkpatt ) . sprintf( $linkpatt, get_permalink( $post->post_parent ), get_the_title( $post->post_parent ) ) . $sep . ( $args->show_post_title ? $post->post_title : '');
             }
+            // single
             elseif( is_single() ){
                 $out = __crumbs_tax( $term->parent, $term->taxonomy, $sep, $linkpatt ) . sprintf( $linkpatt, get_term_link( (int) $term->term_id, $term->taxonomy ), $term->name ). $sep . ( $args->show_post_title ? $post->post_title : '');
             // Метки, архивная страница типа записи, произвольные одноуровневые таксономии
             }
+            // taxonomy не древовидная
             elseif( ! is_taxonomy_hierarchical( $term->taxonomy ) ){
                 // метка
                 if( is_tag() )
                     $out = $pg_term_start . sprintf( $loc->tag, $term->name ) . $pg_end;
                 // таксономия
                 elseif( is_tax() ){
-                    $post_label = $wp_post_types[ $post->post_type ]->labels->name;
+                    $post_label = $ptype->labels->name;
                     $tax_label = $GLOBALS['wp_taxonomies'][ $term->taxonomy ]->labels->name;
                     $out = $pg_term_start . sprintf( $loc->tax_tag, $post_label, $tax_label, $term->name ) .  $pg_end;
                 }
             }
             // Рубрики и таксономии
-            else
+            else{
+                //die( $term->taxonomy );
                 $out = __crumbs_tax( $term->parent, $term->taxonomy, $sep, $linkpatt ) . $pg_term_start . $term->name . $pg_end;
+            }
         }
     }
+
+    $home_after = '';
 
     // замена ссылки на архивную страницу для типа записи 
     $home_after = apply_filters('kama_breadcrumbs_home_after', false, $linkpatt, $sep );
 
-    // ссылка на архивную страницу произвольно типа поста. Ссылку можно заменить с помощью хука 'kama_breadcrumbs_home_after'
-    if( ! $home_after && isset( $post->post_type ) && ! in_array( $post->post_type, array('post','page','attachment') ) ){
-        $pt_name = $wp_post_types[ $post->post_type ]->labels->name;
-        $pt_url  = get_post_type_archive_link( $post->post_type );
-        $home_after = ( is_post_type_archive() && ! $paged ) ? $pt_name : ( sprintf( $linkpatt, $pt_url, $pt_name ). ($pg_end?$pg_end:$sep) );
+    // Cсылка на архивную страницу произвольно типа поста. Ссылку можно заменить с помощью хука 'kama_breadcrumbs_home_after'
+    if( ! $home_after && $ptype->has_archive && (is_post_type_archive() || is_singular()) && ! in_array( $post->post_type, array('post','page','attachment') ) ){
+        $pt_name = $ptype->labels->name;
+
+        if( is_post_type_archive() && ! $paged )
+            $home_after = $pt_name;
+        else
+            $home_after = sprintf( $linkpatt, get_post_type_archive_link( $post->post_type ), $pt_name ) . ($pg_end ? $pg_end : $sep);
     }
 
-    
     $home = sprintf( $linkpatt, home_url(), $loc->home ). $sep . $home_after;
-    
+
+    $out = apply_filters('kama_breadcrumbs_pre_out', $out );
+
     $out = $w1. $home . $out .$w2;
 
     return print apply_filters('kama_breadcrumbs', $out, $sep );
+}
+function __crumbs_tax( $term_id, $tax, $sep, $linkpatt ){
+    $termlink = array();
+    while( (int) $term_id ){
+        $term2      = get_term( $term_id, $tax );
+        $termlink[] = sprintf( $linkpatt, get_term_link( (int) $term2->term_id, $term2->taxonomy ), $term2->name ). $sep;
+        $term_id    = (int) $term2->parent;
+    }
+
+    $termlinks = array_reverse( $termlink );
+
+    return implode('', $termlinks );
 }
 
 add_action('init', 'talk_register');

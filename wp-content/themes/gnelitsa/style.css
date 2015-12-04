@@ -734,6 +734,9 @@ nav .pagination li .active {
   border-bottom: 1px solid #d2d3d4;
   transition: all .3s ease;
 }
+.current-menu-item a{
+   color: #7f7f7f !important;
+}
 /* line 301, ./sass/_new.scss */
 .menu_navbar li .sub-menu a:hover {
   background-color: #fff;
@@ -1038,7 +1041,7 @@ body {
   letter-spacing: 3px;
   padding: 0 0 10px 0px;
   text-transform: uppercase;
-  font-family: "BankGothicCMdBT-Medium";
+   font-family: "RobotoMedium";
 }
 /* line 48, ./sass/style.scss */
 .jo_big_title hr {
@@ -1312,6 +1315,9 @@ body {
   color: #333333;
   font-family: "pt_sansbold";
 }
+.jo_treat_block{
+ // outline: 1px solid red;
+}
 
 /* line 278, ./sass/style.scss */
 .jo_treat_block h2 {
@@ -1321,6 +1327,7 @@ body {
   padding-top: 35px;
   padding-bottom: 30px;
   font-family: "BankGothicCMdBT-Medium";
+
 }
 /* line 285, ./sass/style.scss */
 .jo_treat_block h2:before {
@@ -1339,29 +1346,21 @@ body {
 }
 /* line 299, ./sass/style.scss */
 .jo_treat_block .jo_md2_img {
-  background-size: cover;
+  //background-size: cover;
+  //width: 200px;
   height: 205px;
+  
+}
+.jo_treat_block .jo_md2_img img{
+  display: block;
+  width: 195px;
+  height: 205px;
+  //outline: 1px solid red;
+  text-align: left;
+  margin-left: -20px;
 }
 /* line 303, ./sass/style.scss */
-.jo_treat_block .jo_md2_1 {
-  background: url("./img/treat1.jpg") no-repeat center center;
-}
-/* line 306, ./sass/style.scss */
-.jo_treat_block .jo_md2_2 {
-  background: url("./img/treat2.jpg") no-repeat center center;
-}
-/* line 309, ./sass/style.scss */
-.jo_treat_block .jo_md2_3 {
-  background: url("./img/treat3.jpg") no-repeat center center;
-}
-/* line 312, ./sass/style.scss */
-.jo_treat_block .jo_md2_4 {
-  background: url("./img/treat4.jpg") no-repeat center center;
-}
-/* line 315, ./sass/style.scss */
-.jo_treat_block .jo_md2_5 {
-  background: url("./img/treat5.jpg") no-repeat center center;
-}
+
 /* line 318, ./sass/style.scss */
 .jo_treat_block .jo_md10_block {
   padding-right: 0;
@@ -1378,7 +1377,7 @@ body {
 .jo_treat_block .jo_md10_block .media {
   margin-top: 35px;
   display: inline-block;
-  margin-left: 100px;
+ margin-left: 50px;
 }
 /* line 331, ./sass/style.scss */
 .jo_treat_block .jo_md10_block .media img {
@@ -1400,6 +1399,8 @@ body {
   font-family: "pt_sansregular";
   line-height: 18px;
 }
+
+
 /* line 350, ./sass/style.scss */
 .jo_treat_block .jo_md12_block {
   background-color: #fff;
@@ -1408,7 +1409,7 @@ body {
   box-shadow: 0 0 5px #d1d1d1;
   margin-top: 15px;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 /* line 358, ./sass/style.scss */
 .jo_treat_block .jo_md12_block h3 {
@@ -1458,20 +1459,20 @@ body {
   text-decoration: underline;
 }
 /* line 402, ./sass/style.scss */
-.jo_treat_block .jo_md12_block .jo_nomd {
+.jo_treat_block  .jo_nomd {
   width: 100%;
   height: 60px;
-  background-color: #f6fcfe;
+  //background-color: #f6fcfe;
   text-align: center;
 }
 /* line 407, ./sass/style.scss */
-.jo_treat_block .jo_md12_block .jo_nomd a {
+.jo_treat_block .jo_nomd a {
   display: inline-block;
   text-transform: uppercase;
   color: #1585b5;
   font-size: 14px;
   font-family: "pt_sansbold";
-  margin-top: 25px;
+  margin-top: -20px;
 }
 /* line 417, ./sass/style.scss */
 .jo_treat_block hr {
@@ -2147,11 +2148,11 @@ body {
 }
 @media (max-width: 501px) {
   /* line 998, ./sass/style.scss */
-  .media .media-left {
+  .media-left {
     width: 100%;
   }
   /* line 1001, ./sass/style.scss */
-  .media .media-body {
+  .media-body {
     display: block;
     width: 100%;
     margin-top: 15px;
@@ -2220,7 +2221,62 @@ body {
   }
 }
 
-
+.media-left img{
+  display: block;
+}
 .footer-menu{
   margin-top: -25px;
+}
+
+
+.scrollTop{
+  background:url(./img/arrow_up.png) 0 0 no-repeat;
+  width:50px; /* изменяем: ширина картинки */
+  height:70px; /* изменяем: высота кнопки - половина высоты картинки */
+  bottom:10px;
+  left:90%;
+}
+.scrollTop:hover{
+  /* изменяем: отступ при наведении, 
+  нужно подбирать вручную. Примерно равен высоте кнопки */
+  background-position:0 -76px;
+}
+
+
+.treatment-href{
+  display:block;
+  float: left;
+  width: 20%;
+  padding: 0px 15px;
+  margin-left: 20px;
+  box-sizing: content-box;
+  color: #747474;
+  font-size: 14px;
+  font-family: "pt_sansregular";
+  margin-bottom: 25px;
+}
+.treatment-href:hover{
+   color: #747474;
+}
+.treatment-href:before{
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 11px;
+  display: block;
+ 
+  background-color: #1585b5;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSItMS40MjEwODU0NzE1MjAyZS0xNCUiIHgyPSI1MCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(45deg);
+
+  margin-top: 3px;
+  margin-left: -20px;
+}
+.treatment-href_hidden{
+  display: none;
+ // outline: 1px solid red;
 }

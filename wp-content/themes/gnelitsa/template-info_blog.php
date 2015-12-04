@@ -21,26 +21,7 @@ Template Name: Статьи
                     <hr>
                 </div>
                 <div class="col-lg-4 col-md-12 jo_main_left">
-                    <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/min_img1.png" alt="min_img1">
-                        <a href="#">ПАЦИЕНТАМ</a>
-                    </div>
-                    <div class="jo_active_block">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/min_img2.png" alt="min_img2">
-                        <p>ИНТЕРЕСНЫЕ СТАТЬИ</p>
-                    </div>
-                    <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/min_img3.png" alt="min_img3">
-                        <a href="#">ВИДЕОГАЛЕРЕЯ</a>
-                    </div>
-                    <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/min_img4.png" alt="min_img4">
-                        <a href="#">НОВОСТИ</a>
-                    </div>
-                    <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/min_img5.png" alt="min_img5">
-                        <a href="#" class="jo_last_btn">КУРСЫ ОБУЧЕНИЯ ПО<br>АРТРОСКОПИЧЕСКОЙ<br class="jo_last_btn_br"> ХИРУРГИИ</a>
-                    </div>
+                   <?php require_once('infoblog-menu.php'); ?>
                 </div>
                 <div class="col-lg-8 col-md-12 info_blog">
                     <?php 
