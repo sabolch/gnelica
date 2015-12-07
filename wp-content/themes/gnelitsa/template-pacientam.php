@@ -10,12 +10,8 @@ Template Name: Пациентам
 <div class="container-fluid jo_container_fluid">
         <div class="container">
             <div class="row">
-                <div class="jo_breadcrumb col-md-12">
-                    <ol class="breadcrumb">
-                        <li><a href="#">Главная</a></li>
-                        <li class="active">Инфоблог</li>
-                    </ol>
-                </div>
+              <?php include_once ('breadcramp.php') ?>
+               
                 <div class="jo_big_title col-md-12">
                     <h1>ИНФОБЛОГ</h1>
                     <hr>
@@ -62,7 +58,7 @@ Template Name: Пациентам
                                       </div>
                                     </div>
                                 </div>
-                                <hr>
+                               
                                 <div class="col-md-12">
                                     <h2>подЗАГОЛОВОК</h2>
                                     <p>Felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
@@ -89,7 +85,7 @@ Template Name: Пациентам
                                 <div class="col-md-12">
                                     <p>Felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
                                 </div>
-                                <hr>
+                               
                                 <div class="jo_download">
                                     <div>
                                         <img src="<?php echo get_template_directory_uri(); ?>/img/file_icon.png" alt="file_icon">
@@ -119,7 +115,7 @@ Template Name: Пациентам
                                       </div>
                                     </div>
                                 </div>
-                                <hr>
+                                
                                 <div class="col-md-12">
                                     <h2>подЗАГОЛОВОК</h2>
                                     <p>Felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
@@ -146,7 +142,7 @@ Template Name: Пациентам
                                 <div class="col-md-12">
                                     <p>Felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
                                 </div>
-                                <hr>
+                               
                                 <div class="jo_download">
                                     <div>
                                         <img src="<?php echo get_template_directory_uri(); ?>/img/file_icon.png" alt="file_icon">
@@ -176,7 +172,7 @@ Template Name: Пациентам
                                       </div>
                                     </div>
                                 </div>
-                                <hr>
+                             
                                 <div class="col-md-12">
                                     <h2>подЗАГОЛОВОК</h2>
                                     <p>Felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
@@ -203,7 +199,7 @@ Template Name: Пациентам
                                 <div class="col-md-12">
                                     <p>Felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
                                 </div>
-                                <hr>
+                            
                                 <div class="jo_download">
                                     <div>
                                         <img src="<?php echo get_template_directory_uri(); ?>/img/file_icon.png" alt="file_icon">
@@ -233,7 +229,7 @@ Template Name: Пациентам
                                       </div>
                                     </div>
                                 </div>
-                                <hr>
+                              
                                 <div class="col-md-12">
                                     <h2>подЗАГОЛОВОК</h2>
                                     <p>Felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
@@ -260,7 +256,7 @@ Template Name: Пациентам
                                 <div class="col-md-12">
                                     <p>Felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
                                 </div>
-                                <hr>
+                              
                                 <div class="jo_download">
                                     <div>
                                         <img src="<?php echo get_template_directory_uri(); ?>/img/file_icon.png" alt="file_icon">

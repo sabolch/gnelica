@@ -1,21 +1,14 @@
 <?php 
 /*
 Template Name: О докторе
-
 */
-
 ?>
 
 <?php get_header(); ?>
-    <div class="container-fluid jo_container_fluid">
+    
         <div class="container">
             <div class="row">
-                <div class="jo_breadcrumb col-md-12">
-                    <ol class="breadcrumb">
-                        <li><a href="<?php echo get_template_directory_uri(); ?>/#">Главная</a></li>
-                        <li class="active">О докторе</li>
-                    </ol>
-                </div>
+               <?php include_once ('breadcramp.php') ?>
                 <div class="jo_big_title col-md-12">
                     <h1>О ДОКТОРЕ</h1>
                     <hr>
@@ -60,7 +53,7 @@ Template Name: О докторе
                 <?php
 				    endwhile; 			
         		?>
-                <hr class="jos_dash">
+               
                 <div class="col-md-5 joi_slide">
                     <h2>СЕРТИФИКАТЫ</h2>
                     <div class="joi_slide_mid">
@@ -166,7 +159,7 @@ Template Name: О докторе
                 <div class="col-md-12 joi_h2">
                     <h2>лЕЧЕНИЕ</h2>
                 </div>
-                <hr class="jos_dash">
+               
                 <div class="joi_foot_blocks">
                     <div>
                         <img src="<?php echo get_template_directory_uri(); ?>/img/treat_min1.png" alt="">
@@ -202,10 +195,10 @@ Template Name: О докторе
                         <p>ТАЗОБЕД- <br>РЕННЫЙ СУСТАВ</p>
                     </div>
                 </div>
-                <hr class="jos_dash">
+               
             </div>
         </div>
-    </div>
+   
     <div class="modal fade" id="sert_pop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog video_modal_dialog sert_modal_dialog">
     <div class="modal-content video_modal_content sert_modal_content">

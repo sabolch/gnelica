@@ -135,7 +135,7 @@ table {
       .header-nav ul li a {
         text-transform: uppercase;
         line-height: 15px;
-         font-family: "RobotoMedium";
+        font-family: "RobotoMedium";
         color: #1585b5;
         text-decoration: none; }
       .header-nav ul li a:hover {
@@ -311,16 +311,17 @@ table {
 }
 
 .slider_text_block h2 {
-    font-size: 58px;
+    font-size: 48px;
     color: #1585b5;
     font-family: "RobotoMedium";
     text-transform: uppercase;
 }
 .slider_text_block p {
-    font-size: 22px;
+    font-size: 18px;
     color: #7f7f7f;
-    font-family: "BankGothicCMdBT-Medium";
+    font-family: "RobotoLight";
     text-transform: uppercase;
+    margin-top: 20px;
 }
 .slider_text_block hr {
     background-color: #dbdbdb;
@@ -329,9 +330,9 @@ table {
 }
 .slider_text_block h3 {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 18px;
     color: #7f7f7f;
-    font-family: "PT_Sans-Web-Regular";
+    font-family: "RobotoLight";
 }
 
 .content-video {

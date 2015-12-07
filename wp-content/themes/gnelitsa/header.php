@@ -28,6 +28,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/libs/jquery/jquery-1.11.1.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/arrow_up.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/libs/owl-carousel/owl.carousel.js"></script>
 	<?php wp_head(); ?>
 </head>

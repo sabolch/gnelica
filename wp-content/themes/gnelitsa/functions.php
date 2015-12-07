@@ -658,53 +658,6 @@ function pacientam_register() {
     register_post_type('pacientam', $args);
 }
 
-add_action('init', 'stat_register');
-function stat_register() {
-    $args = array(
-        'label'               => __('Статьи'),
-        'labels'              => array(
-            'name'               => __('Статьи'),
-            'singular_name'      => __('Статьи'),
-            'menu_name'          => __('Статьи'),
-            'all_items'          => __('Все статьи'),
-            'add_new'            => _x('Добавить статью', 'stat'),
-            'add_new_item'       => __('Новая статья'),
-            'edit_item'          => __('Редактировать статью'),
-            'new_item'           => __('Новая статья'),
-            'view_item'          => __('Статьи'),
-            'not_found'          => __('Стаья не найдена'),
-            'not_found_in_trash' => __('Удаленных статьей нет'),
-            'search_items'       => __('Найти статью')
-        ),
-        'description'         => __('Статьи'),
-        'public'              => true,
-        'exclude_from_search' => false,
-        'publicly_queryable'  => true,
-        'show_ui'             => true,
-        'show_in_nav_menus'   => true,
-        'show_in_menu'        => true,
-        'show_in_admin_bar'   => true,
-        'menu_position'       => 5,
-        'capability_type'     => 'post',
-        'hierarchical'        => false,
-        'supports'            => array(
-            'title',
-            'editor',
-            'thumbnail',
-   'excerpt',
-   'custom-fields',
-   
-        ),
-        'has_archive'         => false,
-        'rewrite'             => array(
-            'slug'       => '',
-            'with_front' => false
-        )
-    );
-    register_post_type('stat', $args);
-}
-
-
 add_action('init', 'disease_register');
 function disease_register() {
     $args = array(

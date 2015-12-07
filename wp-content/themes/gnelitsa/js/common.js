@@ -62,7 +62,11 @@ $(document).ready(function() {
 
   }); 
 
-
+  $('.videothumb').click(function(){
+    var video_frame = $(this).parent().find('.hide-frame').html();
+    $('#video_modal_1 .video_modal_body').html(video_frame);
+  });
+  
 
 
   $('#link1').click(function(){

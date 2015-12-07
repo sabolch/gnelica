@@ -1,9 +1,7 @@
 <?php 
 /*
 Template Name: Контакты
-
 */
-
 ?>
 
 <?php get_header(); ?>
@@ -12,7 +10,7 @@ Template Name: Контакты
     <div class="container">
       <div class="row">
         <div class="crosh">
-          <a href="#">Главная </a><span>/ Контакты</span>
+          <a href="/">Главная </a><span>/ Контакты</span>
         </div>
         <h1 class="talk-h1">Контакты</h1>
         <?php 
