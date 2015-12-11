@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'gothic';
+  src: url('BankGothicRUSSMedium.woff') format('woff'),
+       url('BankGothicRUSSMedium.ttf') format('truetype'),
+       url('BankGothicRUSSMedium.svg#BankGothicRUSSMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gothic';
+  src: url('gothic.eot');
+  src: url('gothic.eot?#iefix') format('embedded-opentype'),
+       url('gothic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'pts';
+    src: local('PT Sans'), local('PTSans-Regular'), url('ptsans.woff2') format('woff2'), url('ptsans.woff') format('woff'), url('ptsans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ptsi';
+    src: local('PT Sans Italic'), local('PTSans-Italic'), url('ptsansitalic.woff2') format('woff2'), url('ptsansitalic.woff') format('woff'), url('ptsansitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'ptsb';
+    src: local('PT Sans Bold'), local('PTSans-Bold'), url('ptsansbold.woff2') format('woff2'), url('ptsansbold.woff') format('woff'), url('ptsansbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ptsbi';
+    src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url('ptsansbolditalic.woff2') format('woff2'), url('ptsansbolditalic.woff') format('woff'), url('ptsansbolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
