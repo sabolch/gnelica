@@ -84,7 +84,7 @@ get_header(); ?>
 						<div class="item video-item">
 							<iframe class="video-frame" src="<?php echo (get_post_meta($post->ID, 'ссылка', true)); ?>" frameborder="0" allowfullscreen></iframe>
 							<br><br>
-							<span class="user"><?php echo (get_post_meta($post->ID, 'автор', true)); ?></span>
+							<span class="user"><?php the_title(); ?></span>
 							<span class="date"><? the_time('d.m.Y'); ?></span>
 						</div>
 						<?php

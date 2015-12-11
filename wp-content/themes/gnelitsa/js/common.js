@@ -1,5 +1,6 @@
 $(document).ready(function() {
- 
+
+  var video_ryad = 1; 
   $("#owl-demo").owlCarousel({
  
       navigation : false, // Show next and prev buttons
@@ -57,7 +58,7 @@ $(document).ready(function() {
 
   $('.see_more_disease').click(function(){
     $(this).parent().parent().parent().find('.treatment-href_hidden').fadeIn();
-    $(this).css('display','none');
+    //$(this).css('display','none');
     return false;
 
   }); 
@@ -89,6 +90,26 @@ $(document).ready(function() {
     }
   });
  
+  $('#show-more-video-button').click( function(event){
+    //alert('xxx');
+    $.ajax({
+      type: "GET",
+      url: "/get_more_videos.php",
+      data: "name=John&video_ryad="+video_ryad,
+      success: function(msg){
+        video_ryad++; 
+        $('#more-videos').append(msg);
+      }
+    });
+
+    
+    
+
+    return;
+
+  });
+ 
+
   $('#send-form-button').click( function(event){
     //alert('sss');
     

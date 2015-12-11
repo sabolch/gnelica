@@ -4,7 +4,6 @@ Template name: Лечение
 */
 ?>
 <?php get_header(); ?>
-
 <div class="container">
     <div class="row">
         <?php include_once ('breadcramp.php') ?>
@@ -12,7 +11,6 @@ Template name: Лечение
             <h1><?php the_title(); ?></h1>
             <hr>
         </div>
-
         <?php 
         $myterms = get_terms('disease_category', 'orderby=count');
         foreach( $myterms as $cat ){ 
@@ -22,7 +20,7 @@ Template name: Лечение
             $proc_img = get_field('иконка_сустава', $taxonomy . '_' . $term_id);
         ?>
         <div class="jo_treat_block">
-            <h2><?php echo $cat -> name; ?></h2>
+            <h2><?php echo $cat -> name;?></h2>
             <div class="col-md-2 col-sm-2 col-xs-4 jo_md2_img">
                 <img src="<?php echo $thumbnail['url']; ?>" alt="">
             </div>
@@ -44,10 +42,11 @@ Template name: Лечение
             
             <div class="col-md-12 col-xs-12 col-sm-12 jo_md12_block">
                 <h3>ЗАБОЛЕВАНИЯ</h3>
+                <hr>
                 <?php 
                 $args = array(
                     'post_type' => 'disease',
-                    'disease_category' => 'коленный-сустав',
+                    'disease_category' => $cat->name,
                 );
                 $query = new WP_Query( $args );
                 ?>
@@ -65,10 +64,7 @@ Template name: Лечение
                 <?php if ($is_start == true){ ?>
                 </div>
                 <?php } ?>
-
-                <div class="clear"></div> 
             </div>
-            
             <div class="clearfix"></div>
             <div class="col-dm-12">
                 <div class="jo_nomd">
@@ -77,10 +73,8 @@ Template name: Лечение
             </div>
         </div>    
         <?php          
-            
         }
         ?>
      </div>
 </div>
-
 <?php get_footer(); ?>                

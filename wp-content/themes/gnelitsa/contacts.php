@@ -9,10 +9,11 @@ Template Name: Контакты
   <section class="content">
     <div class="container">
       <div class="row">
-        <div class="crosh">
-          <a href="/">Главная </a><span>/ Контакты</span>
+        <?php include_once ('breadcramp.php') ?>
+        <div class="jo_big_title col-md-12">
+                <h1><?php the_title(); ?></h1>
+                <hr>
         </div>
-        <h1 class="talk-h1">Контакты</h1>
         <?php 
               wp_reset_query(); 
               $wp_query = new WP_Query(array(
