@@ -73,11 +73,11 @@
 				<div class="col-md-3 col-xs-12 col-sm-12 footer-social">
 					<span>соцсети</span><br>
 					<div class="social-icons">
-						<a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/img//social-1.png" alt=""> </a>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img//social-2.png" alt=""></a>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img//social-3.png" alt=""></a>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img//social-4.png" alt=""></a>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img//social-5.png" alt=""></a>
+						<a href="#" class="youtube"><img src="<?php echo get_template_directory_uri(); ?>/img/social-1.png" alt=""> </a>
+						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-2.png" alt=""></a>
+						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-3.png" alt=""></a>
+						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-4.png" alt=""></a>
+						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-5.png" alt=""></a>
 					</div>
 				</div>
 			</div>

@@ -37,25 +37,83 @@ $(document).ready(function() {
  
   });
 
-  $("#owl-demo-review").owlCarousel({
- 
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true,
-      navigationText : ["",""],
-      pagination: false
 
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
- 
-  });
+$("#main-slider").owlCarousel({
+    navigation : false, 
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem:true,
+    pagination: true,
+    autoPlay: true,
+    loop: true,
+    singleItem:true,
+    items : 1, 
+});
 
+$("#video-testimonails-slider").owlCarousel({
+    nav : true,
+    slideSpeed : 300,
+    pagination : false,
+    navText : ["",""],
+    items : 1, 
+    autoPlay: true,
+    loop: true,
+});
+
+$("#video-testimonails-slider-2").owlCarousel({
+    nav : true,
+    slideSpeed : 300,
+    pagination : false,
+    navText : ["",""],
+    items : 1, 
+    autoPlay: true,
+    loop: true,
+});
+
+$("#testimonails-slider").owlCarousel({
+    nav : true,
+    slideSpeed : 300,
+    pagination : false,
+    navText : ["",""],
+    items : 1, 
+    autoPlay: true,
+    loop: true,
+});
+$("#testimonails-slider").owlCarousel({
+    navigation : false, 
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem:true,
+    pagination: false,
+    autoPlay: true,
+    loop: true,
+    singleItem:true,
+    items : 1, 
+});
+
+$("#partners-slider").owlCarousel({
+    nav : false, 
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem:true,
+    pagination: false,
+    autoPlay: true,
+    loop: true,
+    singleItem:true,
+    items : 5, 
+    nav : true,
+    navText : ["",""],
+});
+
+$("#sert-slider").owlCarousel({
+    nav : true,
+    slideSpeed : 300,
+    pagination : false,
+    navText : ["",""],
+    items : 2, 
+    autoPlay: true,
+    loop: true,
+});
   $('.see_more_disease').click(function(){
     $(this).parent().parent().parent().find('.treatment-href_hidden').fadeIn();
     //$(this).css('display','none');
@@ -108,9 +166,29 @@ $(document).ready(function() {
     return;
 
   });
- 
 
-  $('#send-form-button').click( function(event){
+
+$('.faq-toggle-button').click( function(event){ 
+    var val = $(this).html();
+    
+    if (val.trim() == 'Скрыть ответ') {
+        $(this).parent().find('.faq-answer').slideToggle();
+        $(this).html('Показать ответ');
+    }else{
+        $(this).parent().find('.faq-answer').slideToggle();
+        $(this).html('Скрыть ответ');
+    }
+    
+    return;
+});
+
+$('#ask-question-submit').click( function(event){ 
+   $('.blue-button').trigger('click');
+   return;
+});
+
+
+$('#send-form-button').click( function(event){
     //alert('sss');
     
     var empty = true;
@@ -163,19 +241,14 @@ $(document).ready(function() {
 
 
 jQuery(document).ready(function($){
-
-  /**
-   * Кнопка наверх на jQuery. 
-   * Автор: Тимур Камаев, wp-kama.ru
-   * version 2.1
-   */
-  $('body').append('<style>\
-    .scrollTop{\
-      display:none; z-index:9999; position:fixed; bottom:10px; left:90%; width:50px; height:70px;\
-      background:url(http://gnelica.loc/wp-content/themes/gnelitsa/img/arrow_up.png) 0 0 no-repeat;\
-    }\
-    .scrollTop:hover{ background-position:0 -76px;}\
-  </style>');
+    var domen = location.hostname;
+    $('body').append('<style>\
+        .scrollTop{\
+          display:none; z-index:9999; position:fixed; bottom:10px; left:90%; width:50px; height:70px;\
+          background:url(http://'+domen+'/wp-content/themes/gnelitsa/img/arrow_up.png) 0 0 no-repeat;\
+        }\
+        .scrollTop:hover{ background-position:0 -76px;}\
+      </style>');
 
   var
   speed = 500,

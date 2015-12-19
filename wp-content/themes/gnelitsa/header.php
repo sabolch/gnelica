@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<meta charset="utf-8" />
-	<!-- Комментарий -->
 	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
-	
 	<meta content="" name="description" />
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png" />
-
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	 <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css" rel="stylesheet">
+	<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fonts.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/sec_style.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/media.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/owl/assets/owl.carousel.css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/owl.carousel/assets/owl.carousel.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/magnific/magnific-popup.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/sliderPro/dist/css/slider-pro.min.css"/>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/fancybox/jquery.fancybox.css" />
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/owl-carousel/owl.theme.css" />
-  	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/owl-carousel/owl.transitions.css" />
-  	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/owl-carousel/owl.carousel.css" />
+	
 	<script src="<?php echo get_template_directory_uri(); ?>/libs/jquery/jquery-1.11.1.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/arrow_up.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/libs/owl-carousel/owl.carousel.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/libs/owl.carousel/owl.carousel.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/libs/fancybox/jquery.fancybox.pack.js"></script>
+
 	<?php wp_head(); ?>
 </head>
 <body>
-   <section class="header">
+	<script type="text/javascript">
+		$(document).ready(function() {
+		    $(".single_image").fancybox();
+		});
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+		    $("a[rel=group]").fancybox({
+				'transitionIn' : 'none',
+		        'transitionOut' : 'none',
+		        'titlePosition' : 'over',
+		        'titleFormat' : function(title, currentArray, currentIndex, currentOpts) {
+		            return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+		        }
+		    });
+		});
+	</script>
+
+   	<section class="header">
 		<div class="header_top">
 			<div class="container">
 				<div class="row">
@@ -84,9 +98,5 @@
 			</div>
 		</div>
 		</div>
-		<div class="header-bg">
-			<div class="header-info">
-				
-			</div>
-		</div>
+		
 	</section>
